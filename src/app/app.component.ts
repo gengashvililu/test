@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Users } from './Users/Users.modules';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,34 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Server02';
+
+  user: Users = new Users()
+  userlist: Users[] = []
+
+
+ngClick(){
+  this.userlist.push(this.user)
+  this.user= new Users()
 }
+
+
+
+
+moveFocus(nextInput: HTMLInputElement) {
+  nextInput.focus();
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
